@@ -1,11 +1,11 @@
 module.exports = {
-    entry: './index.js',
-    // entry: {
-    //   one: './index.js',
-    //   two: './app.js'
-    // },
+    entry: {
+      one: './src/index.js',
+      two: './src/app.js',
+      three: './src/home.js'
+    },
     output: {
       path: __dirname + '/dist',
-      filename: 'bundle.js'
+      filename: '[name]/[id].bundle.js'
     }
   };
