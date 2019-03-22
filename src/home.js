@@ -1,1 +1,1 @@
-console.log('Home page log...');
+let fromHome = 'Home page log...';
