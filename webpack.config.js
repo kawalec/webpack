@@ -2,11 +2,20 @@ const {resolve} = require('path');
 
 module.exports = {
     entry: {
-      one: './src/index.js',
-      two: './src/app.js'
+      index: './src/index.js',
+      app: './src/app.js'
     },
     output: {
       path: resolve(__dirname, 'dist'),
-      filename: '[name].[id].bundle.js'
+      filename: '[name].bundle.js'
+    },
+    module: {
+      rules: [
+        {
+          test: /\.css/,
+          loader: 'css-loader',
+        }
+      ]
     }
+
   };
