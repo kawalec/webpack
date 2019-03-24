@@ -11,3 +11,6 @@ console.log(f(7));
 
 import {num} from './home.js';
 num(123);
+
+import {x} from './home.js';
+console.log(x);
