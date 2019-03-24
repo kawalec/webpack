@@ -1,5 +1,3 @@
-console.log('Webpack works!');
-
 const arr = [1,3,4,6,8,9,11,14,17,23,26,29,31],
     newArr = [];
 

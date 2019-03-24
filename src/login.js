@@ -1,7 +1,10 @@
 let login = (userName, password) => {
     if(userName !=='admin' || password !== 'radical') {
         console.log('Incorrect login!')
+    } else {
+        console.log('Welcome!');
     }
 };
 
-console.log('login');
+export {login};
+console.log('login.js');

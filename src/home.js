@@ -1,5 +1,5 @@
-export let fromHome = 'Home page log...';
-
-export default function(name) {
+const hello = name => {
     console.log(`Hello ${name}!`);
 }
+
+export default hello;

@@ -12,7 +12,7 @@ module.exports = {
       filename: '[name].bundle.js'
     },
     // watch: true,
-    // devtool: 'source-map',
+    devtool: 'source-map',
     module: {
       rules: [
         {
@@ -22,6 +22,16 @@ module.exports = {
             use: ['css-loader', 'sass-loader'],
             fallback: "style-loader",
           })
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
         }
       ]
     },
