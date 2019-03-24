@@ -1,5 +1,6 @@
 const {resolve} = require('path');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
     entry: {
@@ -10,6 +11,8 @@ module.exports = {
       path: resolve(__dirname, 'dist'),
       filename: '[name].bundle.js'
     },
+    // watch: true,
+    // devtool: 'source-map',
     module: {
       rules: [
         {
@@ -24,5 +27,6 @@ module.exports = {
     },
     plugins: [
       new ExtractTextPlugin("./styles.css"),
+      new LiveReloadPlugin()
     ]
   };
