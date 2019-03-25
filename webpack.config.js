@@ -1,7 +1,6 @@
 const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
     entry: {
@@ -18,7 +17,6 @@ module.exports = {
       rules: [
         {
           test: /\.css$/,
-          // use: ['style-loader', 'css-loader', 'sass-loader'],
           use: ExtractTextPlugin.extract({
             use: ['css-loader', 'sass-loader'],
             fallback: "style-loader",
@@ -36,6 +34,9 @@ module.exports = {
         }
       ]
     },
+    devServer: {
+      contentBase: './dist'
+    },
     plugins: [
       new ExtractTextPlugin("./styles.css"),
       new HtmlWebpackPlugin({
@@ -43,6 +44,5 @@ module.exports = {
         title: 'Weboack config',
         template: './src/index.html'
       })
-      // new LiveReloadPlugin()
     ]
   };
