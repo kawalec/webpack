@@ -1,4 +1,4 @@
-import './styles/styles.css';
+import './styles/styles.sass';
 
 import hello from './app-home.js';
 hello('user');

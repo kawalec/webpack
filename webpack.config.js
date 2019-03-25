@@ -12,14 +12,14 @@ module.exports = {
       filename: '[name].bundle.js'
     },
     // watch: true,
-    devtool: 'source-map',
+    // devtool: 'source-map',
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.sass$/,
           use: ExtractTextPlugin.extract({
             use: ['css-loader', 'sass-loader'],
-            fallback: "style-loader",
+            fallback: 'style-loader',
           })
         },
         {
