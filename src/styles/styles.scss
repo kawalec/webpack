@@ -1,0 +1,10 @@
+$primary-color: rgb(134, 186, 207);
+
+.box {
+    border: 2px solid red;
+    color: $primary-color;
+    font-size: 1.5em;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
