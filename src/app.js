@@ -1,16 +1,16 @@
 import './styles/styles.css';
 
-import hello from './home.js';
+import hello from './app-home.js';
 hello('user');
 
-import {login} from './login.js';
+import {login} from './app-login.js';
 login('admin', 'P@sswo3d');
 
 const f = a => a*a;
 console.log(f(7));
 
-import {num} from './home.js';
+import {num} from './app-home.js';
 num(123);
 
-import {x} from './home.js';
+import {x} from './app-home.js';
 console.log(x);

@@ -1,5 +1,6 @@
 const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
@@ -36,7 +37,12 @@ module.exports = {
       ]
     },
     plugins: [
-      new ExtractTextPlugin("./styles.css")
+      new ExtractTextPlugin("./styles.css"),
+      new HtmlWebpackPlugin({
+        filename: 'index.html',
+        title: 'Weboack config',
+        template: './src/index.html'
+      })
       // new LiveReloadPlugin()
     ]
   };
