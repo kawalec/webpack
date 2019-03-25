@@ -16,7 +16,7 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.sass$|\.scss$/,
+          test: /\.(sass|scss)$/,
           use: ExtractTextPlugin.extract({
             use: ['css-loader', 'sass-loader'],
             fallback: 'style-loader',
@@ -30,6 +30,13 @@ module.exports = {
             options: {
               presets: ['@babel/preset-env']
             }
+          }
+        },
+        {
+          test: /\.(jpg|png|svg)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'url-loader?limit=128000'
           }
         }
       ]

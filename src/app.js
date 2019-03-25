@@ -15,3 +15,5 @@ num(123);
 
 import {x} from './app-home.js';
 console.log(x);
+
+import './app-image.js';
